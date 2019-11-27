@@ -8,25 +8,22 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class Intro extends AppCompatActivity {
+public class EmptyOffice extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.intro_1_00, R.raw.intro_1_01, R.raw.intro_1_02, R.raw.intro_1_03
-                    , R.raw.intro_1_04, R.raw.intro_1_05, R.raw.intro_1_06, R.raw.intro_2_00
-                    , R.raw.intro_2_01, R.raw.intro_2_02, R.raw.intro_2_03, R.raw.intro_2_04
-                    , R.raw.intro_2_05, R.raw.intro_2_06};
+    int[] audioIDs = {R.raw.office_1_00, R.raw.office_1_01, R.raw.office_2_00, R.raw.office_3_00
+                    , R.raw.office_4_00};
     ImageButton nextButton, prevButton;
-    Button option1, option2;
+    Button option1;
     AudioPlayer audio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_intro);
+        setContentView(R.layout.activity_empty_office);
 
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
-        option2 = findViewById(R.id.buttonOption2);
 
         audio = new AudioPlayer(audioIDs, getApplicationContext());
         audio.playAudio();
@@ -49,19 +46,9 @@ public class Intro extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(Intro.this, CowardEnding.class);
-                startActivity(nextScreen);
-            }
-        });
-        option2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                audio.stopAudio();
-                Intent nextScreen = new Intent(Intro.this, EmptyOffice.class);
-                startActivity(nextScreen);
+                //Intent nextScreen = new Intent(EmptyOffice.this, .class);
+                //startActivity(nextScreen);
             }
         });
     }
-
-
 }

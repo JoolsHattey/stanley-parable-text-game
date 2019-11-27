@@ -14,7 +14,6 @@ public class AudioPlayer {
         audioFiles = audioIDs;
         context = activity;
     }
-
     public void playAudio() {
         mPlayer = MediaPlayer.create(context, audioFiles[audioIndex]);
         mPlayer.start();
@@ -28,7 +27,6 @@ public class AudioPlayer {
             }
         });
     }
-
     public void nextTrack() {
         mPlayer.stop();
         if(audioIndex < audioFiles.length-1) {
@@ -36,7 +34,6 @@ public class AudioPlayer {
             playAudio();
         }
     }
-
     public void prevTrack() {
         mPlayer.stop();
         if(audioIndex > 0) {
@@ -46,9 +43,7 @@ public class AudioPlayer {
             playAudio();
         }
     }
-
     public void stopAudio() {
         mPlayer.stop();
     }
-
 }
