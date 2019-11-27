@@ -2,15 +2,14 @@ package com.jools625.the_stanley_parable_text_game;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class LeftRightDoor extends AppCompatActivity {
+public class EnterRightDoor extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.two_doors_00};
+    int[] audioIDs = {R.raw.two_doors_right_00};
     ImageButton nextButton, prevButton;
     Button option1, option2;
     AudioPlayer audio;
@@ -18,7 +17,7 @@ public class LeftRightDoor extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_left_right_door);
+        setContentView(R.layout.activity_enter_right_door);
 
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
@@ -48,14 +47,6 @@ public class LeftRightDoor extends AppCompatActivity {
                 audio.stopAudio();
                 //Intent nextScreen = new Intent(LeftRightDoor.this, CowardEnding.class);
                 //startActivity(nextScreen);
-            }
-        });
-        option2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                audio.stopAudio();
-                Intent nextScreen = new Intent(LeftRightDoor.this, EnterRightDoor.class);
-                startActivity(nextScreen);
             }
         });
     }

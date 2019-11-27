@@ -9,7 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LeftRightDoor"></activity>
+        <activity android:name=".Die"></activity>
+        <activity android:name=".OpenEyes" />
+        <activity android:name=".CloseEyes" />
+        <activity android:name=".LucidDreaming" />
+        <activity android:name=".StanleyCrazy" />
+        <activity android:name=".Staircase" />
+        <activity android:name=".ExitEmployeeLounge" />
+        <activity android:name=".EmployeeLounge" />
+        <activity android:name=".EnterRightDoor" />
+        <activity android:name=".LeftRightDoor" />
         <activity android:name=".EmptyOffice" />
         <activity android:name=".CowardEnding" />
         <activity android:name=".Intro" />
