@@ -35,4 +35,10 @@ public class AudioPlayer {
         playAudio();
     }
 
+    public void prevTrack() {
+        mPlayer.stop();
+        audioIndex--;
+        playAudio();
+    }
+
 }
