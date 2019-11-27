@@ -7,24 +7,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Intro extends AppCompatActivity {
+public class CowardEnding extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.intro_1_00, R.raw.intro_1_01, R.raw.intro_1_02, R.raw.intro_1_03
-                    , R.raw.intro_1_04, R.raw.intro_1_05, R.raw.intro_1_06, R.raw.intro_2_00
-                    , R.raw.intro_2_01, R.raw.intro_2_02, R.raw.intro_2_03, R.raw.intro_2_04
-                    , R.raw.intro_2_05, R.raw.intro_2_06};
-    Button nextButton, prevButton, option1, option2;
+    int[] audioIDs = {R.raw.locked_office_00, R.raw.locked_office_01, R.raw.locked_office_02
+                    , R.raw.locked_office_03, R.raw.locked_office_04, R.raw.locked_office_05};
+    Button nextButton, prevButton, restartGameButton;
     AudioPlayer audio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_intro);
+        setContentView(R.layout.activity_coward_ending);
 
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
-        option1 = findViewById(R.id.buttonRestartGame);
-        option2 = findViewById(R.id.buttonOption2);
+        restartGameButton = findViewById(R.id.buttonRestartGame);
 
         audio = new AudioPlayer(audioIDs, getApplicationContext());
         audio.playAudio();
@@ -41,14 +38,12 @@ public class Intro extends AppCompatActivity {
                 audio.prevTrack();
             }
         });
-        option1.setOnClickListener(new View.OnClickListener() {
+        restartGameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent nextScreen = new Intent(Intro.this, CowardEnding.class);
+                Intent nextScreen = new Intent(CowardEnding.this, HomeScreen.class);
                 startActivity(nextScreen);
             }
         });
     }
-
-
 }

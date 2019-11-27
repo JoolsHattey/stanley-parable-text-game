@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Intro">
+    tools:context=".CowardEnding">
 
     <Button
         android:id="@+id/buttonPrev"
@@ -15,16 +15,6 @@
         android:text="Prev"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <Button
-        android:id="@+id/buttonOption2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="20dp"
-        android:text="Step out of your office"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRestartGame" />
 
     <Button
         android:id="@+id/buttonNext"
@@ -40,9 +30,9 @@
         android:id="@+id/buttonRestartGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
+        android:layout_marginStart="140dp"
         android:layout_marginTop="36dp"
-        android:text="Close your office door"
+        android:text="Restart Game"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonPrev" />
 
