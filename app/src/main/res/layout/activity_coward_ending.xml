@@ -6,23 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".CowardEnding">
 
-    <Button
+    <ImageButton
         android:id="@+id/buttonPrev"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
+        android:layout_marginStart="104dp"
         android:layout_marginTop="60dp"
-        android:text="Prev"
+        android:src="@drawable/ic_fast_rewind_24px"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-    <Button
+    <ImageButton
         android:id="@+id/buttonNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="60dp"
-        android:text="Next"
+        android:src="@drawable/ic_fast_forward_24px"
         app:layout_constraintStart_toEndOf="@+id/buttonPrev"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -41,7 +41,7 @@
         android:layout_width="412dp"
         android:layout_height="281dp"
         android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/intro_background"
-        tools:layout_editor_absoluteX="-1dp" />
+        app:srcCompat="@drawable/intro_background" />
 </androidx.constraintlayout.widget.ConstraintLayout>

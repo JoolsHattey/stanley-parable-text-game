@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class Intro extends AppCompatActivity {
 
@@ -13,7 +14,8 @@ public class Intro extends AppCompatActivity {
                     , R.raw.intro_1_04, R.raw.intro_1_05, R.raw.intro_1_06, R.raw.intro_2_00
                     , R.raw.intro_2_01, R.raw.intro_2_02, R.raw.intro_2_03, R.raw.intro_2_04
                     , R.raw.intro_2_05, R.raw.intro_2_06};
-    Button nextButton, prevButton, option1, option2;
+    ImageButton nextButton, prevButton;
+    Button option1, option2;
     AudioPlayer audio;
 
     @Override
@@ -32,12 +34,14 @@ public class Intro extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                audio.stopAudio();
                 audio.nextTrack();
             }
         });
         prevButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                audio.stopAudio();
                 audio.prevTrack();
             }
         });

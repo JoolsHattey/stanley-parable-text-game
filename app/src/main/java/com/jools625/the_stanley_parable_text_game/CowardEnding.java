@@ -6,12 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class CowardEnding extends AppCompatActivity {
 
     int[] audioIDs = {R.raw.locked_office_00, R.raw.locked_office_01, R.raw.locked_office_02
                     , R.raw.locked_office_03, R.raw.locked_office_04, R.raw.locked_office_05};
-    Button nextButton, prevButton, restartGameButton;
+    ImageButton nextButton, prevButton;
+    Button restartGameButton;
     AudioPlayer audio;
 
     @Override
