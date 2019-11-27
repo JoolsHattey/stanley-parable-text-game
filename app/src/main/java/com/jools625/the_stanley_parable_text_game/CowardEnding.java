@@ -41,6 +41,7 @@ public class CowardEnding extends AppCompatActivity {
         restartGameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                audio.stopAudio();
                 Intent nextScreen = new Intent(CowardEnding.this, HomeScreen.class);
                 startActivity(nextScreen);
             }

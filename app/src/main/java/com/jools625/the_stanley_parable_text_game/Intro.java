@@ -44,6 +44,7 @@ public class Intro extends AppCompatActivity {
         option1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                audio.stopAudio();
                 Intent nextScreen = new Intent(Intro.this, CowardEnding.class);
                 startActivity(nextScreen);
             }
