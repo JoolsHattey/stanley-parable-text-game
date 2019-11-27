@@ -1,7 +1,6 @@
 package com.jools625.the_stanley_parable_text_game;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;

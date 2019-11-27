@@ -1,11 +1,7 @@
 package com.jools625.the_stanley_parable_text_game;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 
