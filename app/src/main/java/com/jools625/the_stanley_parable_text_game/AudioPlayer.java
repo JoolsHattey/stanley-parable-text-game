@@ -8,6 +8,7 @@ public class AudioPlayer {
     private int[] audioFiles;
     private int audioIndex = 0;
     Context context;
+    MediaPlayer mPlayer;
 
     public AudioPlayer(int[] audioIDs, Context activity) {
         audioFiles = audioIDs;
@@ -15,7 +16,7 @@ public class AudioPlayer {
     }
 
     public void playAudio() {
-        MediaPlayer mPlayer = MediaPlayer.create(context, audioFiles[audioIndex]);
+        mPlayer = MediaPlayer.create(context, audioFiles[audioIndex]);
         mPlayer.start();
 
 
@@ -26,6 +27,12 @@ public class AudioPlayer {
                 playAudio();
             }
         });
+    }
+
+    public void nextTrack() {
+        mPlayer.stop();
+        audioIndex++;
+        playAudio();
     }
 
 }
