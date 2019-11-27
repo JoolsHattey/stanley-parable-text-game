@@ -8,22 +8,22 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class EmptyOffice extends AppCompatActivity {
+public class LeftRightDoor extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.office_1_00, R.raw.office_1_01, R.raw.office_2_00, R.raw.office_3_00
-                    , R.raw.office_4_00};
+    int[] audioIDs = {R.raw.two_doors_00};
     ImageButton nextButton, prevButton;
-    Button option1;
+    Button option1, option2;
     AudioPlayer audio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_empty_office);
+        setContentView(R.layout.activity_left_right_door);
 
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
+        option2 = findViewById(R.id.buttonOption2);
 
         audio = new AudioPlayer(audioIDs, getApplicationContext());
         audio.playAudio();
@@ -46,8 +46,16 @@ public class EmptyOffice extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(EmptyOffice.this, LeftRightDoor.class);
-                startActivity(nextScreen);
+                //Intent nextScreen = new Intent(LeftRightDoor.this, CowardEnding.class);
+                //startActivity(nextScreen);
+            }
+        });
+        option2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                audio.stopAudio();
+                //Intent nextScreen = new Intent(LeftRightDoor.this, EmptyOffice.class);
+                //startActivity(nextScreen);
             }
         });
     }
