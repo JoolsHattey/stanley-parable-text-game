@@ -48,6 +48,7 @@ public class EmptyOffice extends AppCompatActivity {
                 audio.stopAudio();
                 Intent nextScreen = new Intent(EmptyOffice.this, LeftRightDoor.class);
                 startActivity(nextScreen);
+                finish();
             }
         });
     }

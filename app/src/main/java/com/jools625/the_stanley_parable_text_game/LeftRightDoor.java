@@ -48,6 +48,7 @@ public class LeftRightDoor extends AppCompatActivity {
                 audio.stopAudio();
                 //Intent nextScreen = new Intent(LeftRightDoor.this, CowardEnding.class);
                 //startActivity(nextScreen);
+                finish();
             }
         });
         option2.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +57,7 @@ public class LeftRightDoor extends AppCompatActivity {
                 audio.stopAudio();
                 Intent nextScreen = new Intent(LeftRightDoor.this, EnterRightDoor.class);
                 startActivity(nextScreen);
+                finish();
             }
         });
     }

@@ -47,6 +47,7 @@ public class CowardEnding extends AppCompatActivity {
                 audio = null;
                 Intent nextScreen = new Intent(CowardEnding.this, HomeScreen.class);
                 startActivity(nextScreen);
+                finish();
             }
         });
     }

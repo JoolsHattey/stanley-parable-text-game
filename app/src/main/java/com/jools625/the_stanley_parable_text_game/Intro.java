@@ -59,6 +59,7 @@ public class Intro extends AppCompatActivity {
                 audio = null;
                 Intent nextScreen = new Intent(Intro.this, CowardEnding.class);
                 startActivity(nextScreen);
+                finish();
             }
         });
         option2.setOnClickListener(new View.OnClickListener() {
@@ -68,6 +69,7 @@ public class Intro extends AppCompatActivity {
                 audio = null;
                 Intent nextScreen = new Intent(Intro.this, EmptyOffice.class);
                 startActivity(nextScreen);
+                finish();
             }
         });
     }
