@@ -49,5 +49,14 @@ public class EnterRightDoor extends AppCompatActivity {
                 //startActivity(nextScreen);
             }
         });
+
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if ((audio!= null) && (audio.isPlaying()))
+        {
+            audio.pause();
+        }
     }
 }

@@ -53,4 +53,7 @@ public class AudioPlayer {
             mPlayer.start();
         }
     }
+    public boolean isPlaying() {
+        return mPlayer.isPlaying();
+    }
 }

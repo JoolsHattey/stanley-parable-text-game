@@ -51,4 +51,12 @@ public class CowardEnding extends AppCompatActivity {
             }
         });
     }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if ((audio!= null) && (audio.isPlaying()))
+        {
+            audio.pause();
+        }
+    }
 }
