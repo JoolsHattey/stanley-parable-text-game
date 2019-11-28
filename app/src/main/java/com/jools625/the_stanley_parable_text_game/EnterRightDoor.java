@@ -2,6 +2,7 @@ package com.jools625.the_stanley_parable_text_game;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -45,8 +46,9 @@ public class EnterRightDoor extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                //Intent nextScreen = new Intent(LeftRightDoor.this, CowardEnding.class);
-                //startActivity(nextScreen);
+                Intent nextScreen = new Intent(EnterRightDoor.this, EmployeeLounge.class);
+                startActivity(nextScreen);
+                finish();
             }
         });
 
