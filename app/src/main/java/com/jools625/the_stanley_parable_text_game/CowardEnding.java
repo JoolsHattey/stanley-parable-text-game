@@ -44,6 +44,7 @@ public class CowardEnding extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
+                audio = null;
                 Intent nextScreen = new Intent(CowardEnding.this, HomeScreen.class);
                 startActivity(nextScreen);
             }

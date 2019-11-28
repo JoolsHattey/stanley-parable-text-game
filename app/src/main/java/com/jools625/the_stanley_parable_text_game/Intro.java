@@ -14,7 +14,7 @@ public class Intro extends AppCompatActivity {
                     , R.raw.intro_1_04, R.raw.intro_1_05, R.raw.intro_1_06, R.raw.intro_2_00
                     , R.raw.intro_2_01, R.raw.intro_2_02, R.raw.intro_2_03, R.raw.intro_2_04
                     , R.raw.intro_2_05, R.raw.intro_2_06};
-    ImageButton nextButton, prevButton;
+    ImageButton nextButton, prevButton, pausePlayButton;
     Button option1, option2;
     AudioPlayer audio;
 
@@ -25,6 +25,7 @@ public class Intro extends AppCompatActivity {
 
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
+        pausePlayButton = findViewById(R.id.buttonPausePlay);
         option1 = findViewById(R.id.buttonOption1);
         option2 = findViewById(R.id.buttonOption2);
 
@@ -45,10 +46,17 @@ public class Intro extends AppCompatActivity {
                 audio.prevTrack();
             }
         });
+        pausePlayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                audio.pause();
+            }
+        });
         option1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
+                audio = null;
                 Intent nextScreen = new Intent(Intro.this, CowardEnding.class);
                 startActivity(nextScreen);
             }
@@ -57,6 +65,7 @@ public class Intro extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
+                audio = null;
                 Intent nextScreen = new Intent(Intro.this, EmptyOffice.class);
                 startActivity(nextScreen);
             }

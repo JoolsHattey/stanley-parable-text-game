@@ -21,6 +21,7 @@ public class  HomeScreen extends AppCompatActivity {
             public void onClick(View v) {
                 Intent myIntent = new Intent(HomeScreen.this, Intro.class);
                 startActivity(myIntent);
+                finish();
             }
         });
     }

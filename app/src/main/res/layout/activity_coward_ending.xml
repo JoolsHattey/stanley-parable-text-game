@@ -6,35 +6,61 @@
     android:layout_height="match_parent"
     tools:context=".CowardEnding">
 
-    <ImageButton
-        android:id="@+id/buttonPrev"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mediaControls"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="60dp"
-        android:src="@drawable/ic_fast_rewind_24px"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
-    <ImageButton
-        android:id="@+id/buttonNext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="60dp"
-        android:src="@drawable/ic_fast_forward_24px"
-        app:layout_constraintStart_toEndOf="@+id/buttonPrev"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        <ImageButton
+            android:id="@+id/buttonPausePlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            app:layout_constraintStart_toEndOf="@+id/buttonPrev"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_pause_24px" />
 
-    <Button
-        android:id="@+id/buttonRestartGame"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="36dp"
-        android:text="Restart Game"
+        <ImageButton
+            android:id="@+id/buttonNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/ic_fast_forward_24px"
+            app:layout_constraintStart_toEndOf="@+id/buttonPausePlay"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/buttonPrev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_fast_rewind_24px"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/optionControls"
+        android:layout_width="263dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonPrev" />
+        app:layout_constraintTop_toBottomOf="@+id/mediaControls">
+
+        <Button
+            android:id="@+id/buttonRestartGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restart game"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
         android:id="@+id/imageView2"
