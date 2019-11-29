@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Die"></activity>
+        <activity android:name=".NextRoom"></activity>
+        <activity android:name=".Die" />
         <activity android:name=".OpenEyes" />
         <activity android:name=".CloseEyes" />
         <activity android:name=".LucidDreaming" />

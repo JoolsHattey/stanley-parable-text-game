@@ -8,21 +8,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class EmployeeLounge extends AppCompatActivity {
+public class NextRoom extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.lounge_1a_00, R.raw.lounge_1a_01, R.raw.lounge_1b_00, R.raw.lounge_1b_01
-                    , R.raw.lounge_2_00, R.raw.lounge_3_00, R.raw.lounge_4_00};
+    int[] audioIDs = {R.raw.two_doors_00};
     ImageButton nextButton, prevButton;
-    Button option1;
+    Button option1, option2;
     AudioPlayer audio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_employee_lounge);
+        setContentView(R.layout.activity_next_room);
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
+        option2 = findViewById(R.id.buttonOption2);
 
         audio = new AudioPlayer(audioIDs, getApplicationContext());
         audio.playAudio();
@@ -45,9 +45,15 @@ public class EmployeeLounge extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(EmployeeLounge.this, ExitEmployeeLounge.class);
+                Intent nextScreen = new Intent(NextRoom.this, LucidDreaming.class);
                 startActivity(nextScreen);
                 finish();
+            }
+        });
+        option2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 
@@ -55,8 +61,7 @@ public class EmployeeLounge extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        if ((audio!= null) && (audio.isPlaying()))
-        {
+        if ((audio != null) && (audio.isPlaying())) {
             audio.pause();
         }
     }
