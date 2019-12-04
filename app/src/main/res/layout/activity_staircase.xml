@@ -55,7 +55,7 @@
             android:id="@+id/buttonOption1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter the left door"
+            android:text="Walk upstairs"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -64,7 +64,7 @@
             android:id="@+id/buttonOption2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter the right door"
+            android:text="Walk downstairs"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -74,11 +74,11 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="412dp"
+        android:layout_width="0dp"
         android:layout_height="281dp"
         android:layout_marginTop="52dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/left_right_door_background" />
+        app:srcCompat="@drawable/staircase_background" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

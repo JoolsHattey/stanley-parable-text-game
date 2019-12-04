@@ -1,4 +1,4 @@
-package com.jools625.the_stanley_parable_text_game;
+package com.jools625.the_stanley_parable_text_game.death_ending;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,10 +8,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class CloseEyes extends AppCompatActivity {
+import com.jools625.the_stanley_parable_text_game.AudioPlayer;
+import com.jools625.the_stanley_parable_text_game.HomeScreen;
+import com.jools625.the_stanley_parable_text_game.R;
 
-    int[] audioIDs = {R.raw.dream_1a_24, R.raw.dream_1a_25, R.raw.dream_1a_26, R.raw.dream_1a_27
-                    , R.raw.dream_1a_28, R.raw.dream_1a_29};
+public class Die extends AppCompatActivity {
+
+    int[] audioIDs = {R.raw.dream_2_00, R.raw.dream_2_01, R.raw.dream_2_02, R.raw.dream_2_03
+                    , R.raw.dream_2_04, R.raw.dream_2_05, R.raw.dream_2_06, R.raw.dream_2_07
+                    , R.raw.dream_2_08, R.raw.dream_2_09, R.raw.dream_2_10};
     ImageButton nextButton, prevButton;
     Button option1, option2;
     AudioPlayer audio;
@@ -19,7 +24,7 @@ public class CloseEyes extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_close_eyes);
+        setContentView(R.layout.activity_die);
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
@@ -46,14 +51,8 @@ public class CloseEyes extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(CloseEyes.this, OpenEyes.class);
+                Intent nextScreen = new Intent(Die.this, HomeScreen.class);
                 startActivity(nextScreen);
-            }
-        });
-        option2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
             }
         });
 

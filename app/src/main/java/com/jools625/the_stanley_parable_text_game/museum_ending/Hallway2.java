@@ -1,4 +1,4 @@
-package com.jools625.the_stanley_parable_text_game;
+package com.jools625.the_stanley_parable_text_game.museum_ending;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,12 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class LucidDreaming extends AppCompatActivity {
+import com.jools625.the_stanley_parable_text_game.AudioPlayer;
+import com.jools625.the_stanley_parable_text_game.R;
 
-    int[] audioIDs = {R.raw.dream_1a_11, R.raw.dream_1a_12, R.raw.dream_1a_13, R.raw.dream_1a_14
-                    , R.raw.dream_1a_15, R.raw.dream_1a_16 ,R.raw.dream_1a_17 ,R.raw.dream_1a_18
-                    , R.raw.dream_1a_19, R.raw.dream_1a_20, R.raw.dream_1a_21 ,R.raw.dream_1a_22
-                    , R.raw.dream_1a_23};
+public class Hallway2 extends AppCompatActivity {
+
+    int[] audioIDs = {R.raw.two_doors_00};
     ImageButton nextButton, prevButton;
     Button option1, option2;
     AudioPlayer audio;
@@ -21,7 +21,7 @@ public class LucidDreaming extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lucid_dreaming);
+        setContentView(R.layout.activity_hallway2);
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
@@ -44,19 +44,13 @@ public class LucidDreaming extends AppCompatActivity {
                 audio.prevTrack();
             }
         });
-        option1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                audio.stopAudio();
-                Intent nextScreen = new Intent(LucidDreaming.this, CloseEyes.class);
-                startActivity(nextScreen);
-                finish();
-            }
-        });
         option2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                audio.stopAudio();
+                Intent nextScreen = new Intent(Hallway2.this, Hallway3.class);
+                startActivity(nextScreen);
+                finish();
             }
         });
 
@@ -64,7 +58,8 @@ public class LucidDreaming extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        if ((audio != null) && (audio.isPlaying())) {
+        if ((audio!= null) && (audio.isPlaying()))
+        {
             audio.pause();
         }
     }

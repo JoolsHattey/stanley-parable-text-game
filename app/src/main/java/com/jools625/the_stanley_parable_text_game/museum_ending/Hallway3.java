@@ -1,4 +1,4 @@
-package com.jools625.the_stanley_parable_text_game;
+package com.jools625.the_stanley_parable_text_game.museum_ending;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,12 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.jools625.the_stanley_parable_text_game.BossOffice.Keypad1;
-import com.jools625.the_stanley_parable_text_game.death_ending.StanleyCrazy;
+import com.jools625.the_stanley_parable_text_game.AudioPlayer;
+import com.jools625.the_stanley_parable_text_game.R;
 
-public class Staircase extends AppCompatActivity {
+public class Hallway3 extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.staircase_00};
+    int[] audioIDs = {R.raw.two_doors_00};
     ImageButton nextButton, prevButton;
     Button option1, option2;
     AudioPlayer audio;
@@ -21,7 +21,7 @@ public class Staircase extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_staircase);
+        setContentView(R.layout.activity_hallway3);
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
@@ -48,16 +48,9 @@ public class Staircase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(Staircase.this, Keypad1.class);
+                Intent nextScreen = new Intent(Hallway3.this, Machine.class);
                 startActivity(nextScreen);
-            }
-        });
-        option2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                audio.stopAudio();
-                Intent nextScreen = new Intent(Staircase.this, StanleyCrazy.class);
-                startActivity(nextScreen);
+                finish();
             }
         });
 
@@ -65,7 +58,8 @@ public class Staircase extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        if ((audio != null) && (audio.isPlaying())) {
+        if ((audio!= null) && (audio.isPlaying()))
+        {
             audio.pause();
         }
     }

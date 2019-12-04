@@ -1,4 +1,4 @@
-package com.jools625.the_stanley_parable_text_game;
+package com.jools625.the_stanley_parable_text_game.death_ending;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,11 +8,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class Die extends AppCompatActivity {
+import com.jools625.the_stanley_parable_text_game.AudioPlayer;
+import com.jools625.the_stanley_parable_text_game.R;
 
-    int[] audioIDs = {R.raw.dream_2_00, R.raw.dream_2_01, R.raw.dream_2_02, R.raw.dream_2_03
-                    , R.raw.dream_2_04, R.raw.dream_2_05, R.raw.dream_2_06, R.raw.dream_2_07
-                    , R.raw.dream_2_08, R.raw.dream_2_09, R.raw.dream_2_10};
+public class LucidDreaming extends AppCompatActivity {
+
+    int[] audioIDs = {R.raw.dream_1a_11, R.raw.dream_1a_12, R.raw.dream_1a_13, R.raw.dream_1a_14
+                    , R.raw.dream_1a_15, R.raw.dream_1a_16 ,R.raw.dream_1a_17 ,R.raw.dream_1a_18
+                    , R.raw.dream_1a_19, R.raw.dream_1a_20, R.raw.dream_1a_21 ,R.raw.dream_1a_22
+                    , R.raw.dream_1a_23};
     ImageButton nextButton, prevButton;
     Button option1, option2;
     AudioPlayer audio;
@@ -20,7 +24,7 @@ public class Die extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_die);
+        setContentView(R.layout.activity_lucid_dreaming);
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
@@ -47,8 +51,15 @@ public class Die extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(Die.this, HomeScreen.class);
+                Intent nextScreen = new Intent(LucidDreaming.this, CloseEyes.class);
                 startActivity(nextScreen);
+                finish();
+            }
+        });
+        option2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 

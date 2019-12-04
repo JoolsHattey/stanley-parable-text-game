@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".death_ending.CloseEyes">
-
+    tools:context=".museum_ending.Machine">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mediaControls"
         android:layout_width="wrap_content"
@@ -55,7 +54,7 @@
             android:id="@+id/buttonOption1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Open your eyes"
+            android:text="Walk into the door"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -70,5 +69,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/left_right_door_background" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

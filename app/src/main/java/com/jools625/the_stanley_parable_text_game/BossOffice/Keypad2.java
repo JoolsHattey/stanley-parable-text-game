@@ -1,4 +1,4 @@
-package com.jools625.the_stanley_parable_text_game;
+package com.jools625.the_stanley_parable_text_game.BossOffice;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class NextRoom extends AppCompatActivity {
+import com.jools625.the_stanley_parable_text_game.AudioPlayer;
+import com.jools625.the_stanley_parable_text_game.R;
+
+public class Keypad2 extends AppCompatActivity {
 
     int[] audioIDs = {R.raw.two_doors_00};
     ImageButton nextButton, prevButton;
@@ -18,7 +21,8 @@ public class NextRoom extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_next_room);
+        setContentView(R.layout.activity_keypad2);
+
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
@@ -45,7 +49,7 @@ public class NextRoom extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(NextRoom.this, LucidDreaming.class);
+                Intent nextScreen = new Intent(Keypad2.this, DoorOpens.class);
                 startActivity(nextScreen);
                 finish();
             }
@@ -53,15 +57,18 @@ public class NextRoom extends AppCompatActivity {
         option2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                audio.stopAudio();
+                Intent nextScreen = new Intent(Keypad2.this, DoorOpensOverride.class);
+                startActivity(nextScreen);
+                finish();
             }
         });
-
     }
     @Override
     protected void onPause() {
         super.onPause();
-        if ((audio != null) && (audio.isPlaying())) {
+        if ((audio!= null) && (audio.isPlaying()))
+        {
             audio.pause();
         }
     }
