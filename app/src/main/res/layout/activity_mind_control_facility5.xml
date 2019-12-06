@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LeftRightDoor"
-    android:background="@android:color/holo_red_light">
-
+    tools:context=".mind_control_facility.MindControlFacility5">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mediaControls"
         android:layout_width="wrap_content"
@@ -57,7 +55,7 @@
             android:id="@+id/buttonOption1"
             android:layout_width="match_parent"
             android:layout_height="65dp"
-            android:text="Enter the left door"
+            android:text="Press OFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -67,7 +65,7 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginTop="24dp"
-            android:text="Enter the right door"
+            android:text="Press ON"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/buttonOption1" />
@@ -77,8 +75,9 @@
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="412dp"
-        android:layout_height="333dp"
+        android:layout_height="281dp"
+        android:layout_marginTop="52dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/two_doors_background1" />
+        app:srcCompat="@drawable/left_right_door_background" />
 </androidx.constraintlayout.widget.ConstraintLayout>
