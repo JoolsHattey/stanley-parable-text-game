@@ -23,7 +23,7 @@ public class CowardEnding extends AppCompatActivity {
 
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
-        restartGameButton = findViewById(R.id.buttonRestartGame);
+        restartGameButton = findViewById(R.id.buttonOption1);
 
         audio = new AudioPlayer(audioIDs, getApplicationContext());
         audio.playAudio();

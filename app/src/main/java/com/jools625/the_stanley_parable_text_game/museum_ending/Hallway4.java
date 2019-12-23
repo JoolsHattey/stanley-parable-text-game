@@ -10,23 +10,21 @@ import android.widget.ImageButton;
 
 import com.jools625.the_stanley_parable_text_game.AudioPlayer;
 import com.jools625.the_stanley_parable_text_game.R;
-import com.jools625.the_stanley_parable_text_game.mind_control_facility.MindControlFacility;
 
-public class Hallway3 extends AppCompatActivity {
+public class Hallway4 extends AppCompatActivity {
 
     int[] audioIDs = {R.raw.two_doors_00};
     ImageButton nextButton, prevButton;
-    Button option1, option2;
+    Button option1;
     AudioPlayer audio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hallway3);
+        setContentView(R.layout.activity_hallway4);
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
-        option2 = findViewById(R.id.buttonOption2);
 
         audio = new AudioPlayer(audioIDs, getApplicationContext());
         audio.playAudio();
@@ -49,16 +47,7 @@ public class Hallway3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(Hallway3.this, MindControlFacility.class);
-                startActivity(nextScreen);
-                finish();
-            }
-        });
-        option1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                audio.stopAudio();
-                Intent nextScreen = new Intent(Hallway3.this, Hallway4.class);
+                Intent nextScreen = new Intent(Hallway4.this, Machine.class);
                 startActivity(nextScreen);
                 finish();
             }

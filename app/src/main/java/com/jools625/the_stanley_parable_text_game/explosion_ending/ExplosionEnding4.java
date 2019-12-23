@@ -49,7 +49,7 @@ public class ExplosionEnding4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(ExplosionEnding4.this, ExplosionEnding4.class);
+                Intent nextScreen = new Intent(ExplosionEnding4.this, ExplosionEnding5.class);
                 startActivity(nextScreen);
                 finish();
             }

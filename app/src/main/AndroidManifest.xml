@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".explosion_ending.ExplosionEnding5"></activity>
+        <activity android:name=".museum_ending.Hallway4"></activity>
+        <activity android:name=".EnterLeftDoor" />
+        <activity android:name=".explosion_ending.ExplosionEnding5" />
         <activity android:name=".explosion_ending.ExplosionEnding4" />
         <activity android:name=".explosion_ending.ExplosionEnding3" />
         <activity android:name=".explosion_ending.ExplosionEnding2" />

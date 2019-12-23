@@ -12,7 +12,7 @@ public class ExitEmployeeLounge extends AppCompatActivity {
 
     int[] audioIDs = {R.raw.staircase_00};
     ImageButton nextButton, prevButton;
-    Button option1, option2;
+    Button option1;
     AudioPlayer audio;
 
 
@@ -23,7 +23,6 @@ public class ExitEmployeeLounge extends AppCompatActivity {
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
-        option2 = findViewById(R.id.buttonOption2);
 
         audio = new AudioPlayer(audioIDs, getApplicationContext());
         audio.playAudio();
@@ -49,12 +48,6 @@ public class ExitEmployeeLounge extends AppCompatActivity {
                 Intent nextScreen = new Intent(ExitEmployeeLounge.this, Staircase.class);
                 startActivity(nextScreen);
                 finish();
-            }
-        });
-        option2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
             }
         });
 

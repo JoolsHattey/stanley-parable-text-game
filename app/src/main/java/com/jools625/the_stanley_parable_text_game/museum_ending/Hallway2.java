@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 
 import com.jools625.the_stanley_parable_text_game.AudioPlayer;
 import com.jools625.the_stanley_parable_text_game.R;
+import com.jools625.the_stanley_parable_text_game.mind_control_facility.MindControlFacility;
 
 public class Hallway2 extends AppCompatActivity {
 
@@ -42,6 +43,15 @@ public class Hallway2 extends AppCompatActivity {
             public void onClick(View v) {
                 audio.stopAudio();
                 audio.prevTrack();
+            }
+        });
+        option1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                audio.stopAudio();
+                Intent nextScreen = new Intent(Hallway2.this, MindControlFacility.class);
+                startActivity(nextScreen);
+                finish();
             }
         });
         option2.setOnClickListener(new View.OnClickListener() {

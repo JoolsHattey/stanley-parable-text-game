@@ -17,17 +17,17 @@
 
         <ImageButton
             android:id="@+id/buttonPausePlay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
             android:layout_marginStart="24dp"
+            android:src="@drawable/ic_pause_24px"
             app:layout_constraintStart_toEndOf="@+id/buttonPrev"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_pause_24px" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
             android:id="@+id/buttonNext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
             android:layout_marginStart="24dp"
             android:src="@drawable/ic_fast_forward_24px"
             app:layout_constraintStart_toEndOf="@+id/buttonPausePlay"
@@ -35,17 +35,18 @@
 
         <ImageButton
             android:id="@+id/buttonPrev"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
             android:src="@drawable/ic_fast_rewind_24px"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/optionControls"
-        android:layout_width="263dp"
-        android:layout_height="136dp"
+        android:layout_width="243dp"
+        android:layout_height="170dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,8 +54,8 @@
 
         <Button
             android:id="@+id/buttonOption1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
             android:text="Enter 2-8-4-5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,10 +63,10 @@
 
         <Button
             android:id="@+id/buttonOption2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="24dp"
             android:text="Enter another number"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/buttonOption1" />
@@ -75,10 +76,9 @@
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="412dp"
-        android:layout_height="281dp"
-        android:layout_marginTop="52dp"
+        android:layout_height="333dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/left_right_door_background" />
+        app:srcCompat="@drawable/two_doors_background1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

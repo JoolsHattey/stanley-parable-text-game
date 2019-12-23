@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BossOffice.Keypad1">
-
+    tools:context=".museum_ending.Hallway4">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mediaControls"
         android:layout_width="wrap_content"
@@ -56,20 +55,10 @@
             android:id="@+id/buttonOption1"
             android:layout_width="match_parent"
             android:layout_height="65dp"
-            android:text="Enter 2-8-4-5"
+            android:text="Die"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/buttonOption2"
-            android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:layout_marginTop="24dp"
-            android:text="Enter another number"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonOption1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -80,5 +69,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/two_doors_background1" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
