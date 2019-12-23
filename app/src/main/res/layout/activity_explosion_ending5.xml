@@ -55,7 +55,7 @@
             android:id="@+id/buttonOption1"
             android:layout_width="match_parent"
             android:layout_height="65dp"
-            android:text="Restart Game"
+            android:text="Restart game"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -65,9 +65,8 @@
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="412dp"
-        android:layout_height="281dp"
-        android:layout_marginTop="52dp"
+        android:layout_height="333dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/left_right_door_background" />
+        app:srcCompat="@drawable/intro_background" />
 </androidx.constraintlayout.widget.ConstraintLayout>

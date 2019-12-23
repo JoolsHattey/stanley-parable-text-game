@@ -50,6 +50,7 @@ public class Staircase extends AppCompatActivity {
                 audio.stopAudio();
                 Intent nextScreen = new Intent(Staircase.this, Keypad1.class);
                 startActivity(nextScreen);
+                finish();
             }
         });
         option2.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +59,7 @@ public class Staircase extends AppCompatActivity {
                 audio.stopAudio();
                 Intent nextScreen = new Intent(Staircase.this, StanleyCrazy.class);
                 startActivity(nextScreen);
+                finish();
             }
         });
 

@@ -75,9 +75,8 @@
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="412dp"
-        android:layout_height="281dp"
-        android:layout_marginTop="52dp"
+        android:layout_height="333dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/left_right_door_background" />
+        app:srcCompat="@drawable/two_doors_background1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
