@@ -13,7 +13,7 @@ import com.jools625.the_stanley_parable_text_game.R;
 
 public class DarkRoom extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.two_doors_00};
+    int[] audioIDs = {R.raw.femnarr_4_00, R.raw.femnarr_4_01, R.raw.femnarr_4_02};
     ImageButton nextButton, prevButton;
     Button option1;
     AudioPlayer audio;

@@ -17,7 +17,7 @@ import com.jools625.the_stanley_parable_text_game.mind_control_facility.MindCont
 
 public class Hallway1 extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.two_doors_00};
+    int[] audioIDs = {R.raw.escape_hall_1_00};
     ImageButton nextButton, prevButton;
     Button option1, option2;
     AudioPlayer audio;

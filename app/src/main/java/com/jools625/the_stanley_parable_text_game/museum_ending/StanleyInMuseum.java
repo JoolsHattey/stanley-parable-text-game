@@ -13,7 +13,7 @@ import com.jools625.the_stanley_parable_text_game.R;
 
 public class StanleyInMuseum extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.two_doors_00};
+    int[] audioIDs = {R.raw.femnarr_3_00, R.raw.femnarr_3_01};
     ImageButton nextButton, prevButton;
     Button option1;
     AudioPlayer audio;

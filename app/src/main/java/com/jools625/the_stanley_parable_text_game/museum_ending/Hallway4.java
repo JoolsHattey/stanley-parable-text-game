@@ -13,7 +13,7 @@ import com.jools625.the_stanley_parable_text_game.R;
 
 public class Hallway4 extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.two_doors_00};
+    int[] audioIDs = {R.raw.death_machine_1_00, R.raw.death_machine_2_01, R.raw.death_machine_2_02, R.raw.death_machine_2_03, R.raw.death_machine_2_04,};
     ImageButton nextButton, prevButton;
     Button option1;
     AudioPlayer audio;

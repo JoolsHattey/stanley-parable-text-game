@@ -14,7 +14,7 @@ import com.jools625.the_stanley_parable_text_game.R;
 
 public class Ending extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.two_doors_00};
+    int[] audioIDs = {R.raw.femnarr_5_00, R.raw.femnarr_5_01, R.raw.femnarr_6_00, R.raw.femnarr_6_01, R.raw.femnarr_6_02, R.raw.femnarr_6_03};
     ImageButton nextButton, prevButton;
     Button option1;
     AudioPlayer audio;
