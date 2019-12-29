@@ -54,7 +54,7 @@ public class Hallway3 extends AppCompatActivity {
                 finish();
             }
         });
-        option1.setOnClickListener(new View.OnClickListener() {
+        option2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();

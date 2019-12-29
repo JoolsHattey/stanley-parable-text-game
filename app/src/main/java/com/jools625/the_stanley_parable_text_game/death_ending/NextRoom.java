@@ -16,7 +16,7 @@ public class NextRoom extends AppCompatActivity {
     int[] audioIDs = {R.raw.dream_1a_04, R.raw.dream_1a_05, R.raw.dream_1a_06, R.raw.dream_1a_07
                     , R.raw.dream_1a_08, R.raw.dream_1a_09, R.raw.dream_1a_10};
     ImageButton nextButton, prevButton;
-    Button option1, option2;
+    Button option1;
     AudioPlayer audio;
 
     @Override
@@ -26,7 +26,6 @@ public class NextRoom extends AppCompatActivity {
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
-        option2 = findViewById(R.id.buttonOption2);
 
         audio = new AudioPlayer(audioIDs, getApplicationContext());
         audio.playAudio();
@@ -54,13 +53,6 @@ public class NextRoom extends AppCompatActivity {
                 finish();
             }
         });
-        option2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
     }
     @Override
     protected void onPause() {

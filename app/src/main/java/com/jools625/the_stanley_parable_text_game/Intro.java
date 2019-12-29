@@ -57,7 +57,7 @@ public class Intro extends AppCompatActivity {
             public void onClick(View v) {
                 audio.stopAudio();
                 audio = null;
-                Intent nextScreen = new Intent(Intro.this, CowardEnding.class);
+                Intent nextScreen = new Intent(Intro.this, EmptyOffice.class);
                 startActivity(nextScreen);
                 finish();
             }
@@ -67,7 +67,7 @@ public class Intro extends AppCompatActivity {
             public void onClick(View v) {
                 audio.stopAudio();
                 audio = null;
-                Intent nextScreen = new Intent(Intro.this, EmptyOffice.class);
+                Intent nextScreen = new Intent(Intro.this, CowardEnding.class);
                 startActivity(nextScreen);
                 finish();
             }

@@ -15,7 +15,7 @@ public class StanleyCrazy extends AppCompatActivity {
 
     int[] audioIDs = {R.raw.dream_1a_01, R.raw.dream_1a_02, R.raw.dream_1a_03};
     ImageButton nextButton, prevButton;
-    Button option1, option2;
+    Button option1;
     AudioPlayer audio;
 
     @Override
@@ -25,7 +25,6 @@ public class StanleyCrazy extends AppCompatActivity {
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
-        option2 = findViewById(R.id.buttonOption2);
 
         audio = new AudioPlayer(audioIDs, getApplicationContext());
         audio.playAudio();
@@ -50,12 +49,6 @@ public class StanleyCrazy extends AppCompatActivity {
                 audio.stopAudio();
                 Intent nextScreen = new Intent(StanleyCrazy.this, NextRoom.class);
                 startActivity(nextScreen);
-            }
-        });
-        option2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
             }
         });
 

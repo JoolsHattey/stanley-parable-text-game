@@ -16,7 +16,7 @@ public class CloseEyes extends AppCompatActivity {
     int[] audioIDs = {R.raw.dream_1a_24, R.raw.dream_1a_25, R.raw.dream_1a_26, R.raw.dream_1a_27
                     , R.raw.dream_1a_28, R.raw.dream_1a_29};
     ImageButton nextButton, prevButton;
-    Button option1, option2;
+    Button option1;
     AudioPlayer audio;
 
     @Override
@@ -26,7 +26,6 @@ public class CloseEyes extends AppCompatActivity {
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
-        option2 = findViewById(R.id.buttonOption2);
 
         audio = new AudioPlayer(audioIDs, getApplicationContext());
         audio.playAudio();
@@ -51,12 +50,6 @@ public class CloseEyes extends AppCompatActivity {
                 audio.stopAudio();
                 Intent nextScreen = new Intent(CloseEyes.this, OpenEyes.class);
                 startActivity(nextScreen);
-            }
-        });
-        option2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
             }
         });
 
