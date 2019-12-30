@@ -68,5 +68,5 @@
         android:layout_height="333dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/two_doors_background1" />
+        app:srcCompat="@drawable/hallway4_background" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,12 +9,14 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.jools625.the_stanley_parable_text_game.AudioPlayer;
+import com.jools625.the_stanley_parable_text_game.HomeScreen;
 import com.jools625.the_stanley_parable_text_game.R;
 
-public class NextRoom extends AppCompatActivity {
+public class StanleyCrazy6 extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.dream_1a_04, R.raw.dream_1a_05, R.raw.dream_1a_06, R.raw.dream_1a_07
-                    , R.raw.dream_1a_08, R.raw.dream_1a_09, R.raw.dream_1a_10};
+    int[] audioIDs = {R.raw.dream_2_00, R.raw.dream_2_01, R.raw.dream_2_02, R.raw.dream_2_03
+                    , R.raw.dream_2_04, R.raw.dream_2_05, R.raw.dream_2_06, R.raw.dream_2_07
+                    , R.raw.dream_2_08, R.raw.dream_2_09, R.raw.dream_2_10};
     ImageButton nextButton, prevButton;
     Button option1;
     AudioPlayer audio;
@@ -22,7 +24,7 @@ public class NextRoom extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_next_room);
+        setContentView(R.layout.activity_stanely_crazy6);
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
@@ -48,11 +50,11 @@ public class NextRoom extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(NextRoom.this, LucidDreaming.class);
+                Intent nextScreen = new Intent(StanleyCrazy6.this, HomeScreen.class);
                 startActivity(nextScreen);
-                finish();
             }
         });
+
     }
     @Override
     protected void onPause() {

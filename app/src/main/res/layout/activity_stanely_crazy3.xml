@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".museum_ending.StanleyInMuseum">
+    tools:context=".death_ending.StanleyCrazy3">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mediaControls"
         android:layout_width="wrap_content"
@@ -55,7 +56,7 @@
             android:id="@+id/buttonOption1"
             android:layout_width="match_parent"
             android:layout_height="65dp"
-            android:text="Exit the museum"
+            android:text="Close your eyes"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -68,5 +69,5 @@
         android:layout_height="333dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/intro_background" />
+        app:srcCompat="@drawable/stanley_crazy3_background" />
 </androidx.constraintlayout.widget.ConstraintLayout>

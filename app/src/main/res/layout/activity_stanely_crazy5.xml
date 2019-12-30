@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".death_ending.StanleyCrazy">
+    tools:context=".death_ending.StanleyCrazy5">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mediaControls"
@@ -56,7 +56,7 @@
             android:id="@+id/buttonOption1"
             android:layout_width="match_parent"
             android:layout_height="65dp"
-            android:text="Walk into the next room"
+            android:text="Die"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -69,6 +69,6 @@
         android:layout_height="333dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/intro_background" />
+        app:srcCompat="@drawable/stanley_crazy5_background" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

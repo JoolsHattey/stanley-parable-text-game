@@ -1,4 +1,4 @@
-package com.jools625.the_stanley_parable_text_game.death_ending;
+package com.jools625.the_stanley_parable_text_game.museum_ending;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,9 +11,9 @@ import android.widget.ImageButton;
 import com.jools625.the_stanley_parable_text_game.AudioPlayer;
 import com.jools625.the_stanley_parable_text_game.R;
 
-public class OpenEyes extends AppCompatActivity {
+public class Museum3 extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.dream_1b_00, R.raw.dream_1b_01, R.raw.dream_1b_02};
+    int[] audioIDs = {R.raw.femnarr_4_00, R.raw.femnarr_4_01, R.raw.femnarr_4_02};
     ImageButton nextButton, prevButton;
     Button option1;
     AudioPlayer audio;
@@ -21,7 +21,7 @@ public class OpenEyes extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_open_eyes);
+        setContentView(R.layout.activity_museum3);
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
@@ -47,7 +47,7 @@ public class OpenEyes extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(OpenEyes.this, Die.class);
+                Intent nextScreen = new Intent(Museum3.this, Museum4.class);
                 startActivity(nextScreen);
                 finish();
             }
@@ -57,7 +57,8 @@ public class OpenEyes extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        if ((audio != null) && (audio.isPlaying())) {
+        if ((audio!= null) && (audio.isPlaying()))
+        {
             audio.pause();
         }
     }

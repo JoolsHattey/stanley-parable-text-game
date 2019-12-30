@@ -1,4 +1,4 @@
-package com.jools625.the_stanley_parable_text_game.death_ending;
+package com.jools625.the_stanley_parable_text_game.mind_control_facility;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,10 +11,9 @@ import android.widget.ImageButton;
 import com.jools625.the_stanley_parable_text_game.AudioPlayer;
 import com.jools625.the_stanley_parable_text_game.R;
 
-public class CloseEyes extends AppCompatActivity {
+public class MindControlFacility1 extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.dream_1a_24, R.raw.dream_1a_25, R.raw.dream_1a_26, R.raw.dream_1a_27
-                    , R.raw.dream_1a_28, R.raw.dream_1a_29};
+    int[] audioIDs = {R.raw.two_doors_00};
     ImageButton nextButton, prevButton;
     Button option1;
     AudioPlayer audio;
@@ -22,7 +21,7 @@ public class CloseEyes extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_close_eyes);
+        setContentView(R.layout.activity_mind_control_facility1);
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
@@ -48,8 +47,9 @@ public class CloseEyes extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(CloseEyes.this, OpenEyes.class);
+                Intent nextScreen = new Intent(MindControlFacility1.this, MindControlFacility2.class);
                 startActivity(nextScreen);
+                finish();
             }
         });
 
@@ -57,7 +57,8 @@ public class CloseEyes extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        if ((audio != null) && (audio.isPlaying())) {
+        if ((audio!= null) && (audio.isPlaying()))
+        {
             audio.pause();
         }
     }

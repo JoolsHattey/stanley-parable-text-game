@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.jools625.the_stanley_parable_text_game.BossOffice.Keypad1;
-import com.jools625.the_stanley_parable_text_game.death_ending.StanleyCrazy;
+import com.jools625.the_stanley_parable_text_game.death_ending.StanleyCrazy1;
 
 public class Staircase extends AppCompatActivity {
 
@@ -57,7 +57,7 @@ public class Staircase extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(Staircase.this, StanleyCrazy.class);
+                Intent nextScreen = new Intent(Staircase.this, StanleyCrazy1.class);
                 startActivity(nextScreen);
                 finish();
             }

@@ -11,9 +11,9 @@ import android.widget.ImageButton;
 import com.jools625.the_stanley_parable_text_game.AudioPlayer;
 import com.jools625.the_stanley_parable_text_game.R;
 
-public class StanleyInMuseum extends AppCompatActivity {
+public class Museum1 extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.femnarr_3_00, R.raw.femnarr_3_01};
+    int[] audioIDs = {R.raw.femnarr_1_00, R.raw.femnarr_1_01, R.raw.femnarr_2_00, R.raw.femnarr_2_01};
     ImageButton nextButton, prevButton;
     Button option1;
     AudioPlayer audio;
@@ -21,7 +21,7 @@ public class StanleyInMuseum extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_stanley_in_museum);
+        setContentView(R.layout.activity_museum1);
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
@@ -47,7 +47,7 @@ public class StanleyInMuseum extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(StanleyInMuseum.this, DarkRoom.class);
+                Intent nextScreen = new Intent(Museum1.this, Museum2.class);
                 startActivity(nextScreen);
                 finish();
             }

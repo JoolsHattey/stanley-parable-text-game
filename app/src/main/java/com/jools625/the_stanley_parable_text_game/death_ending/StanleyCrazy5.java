@@ -1,4 +1,4 @@
-package com.jools625.the_stanley_parable_text_game.museum_ending;
+package com.jools625.the_stanley_parable_text_game.death_ending;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,12 +9,11 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.jools625.the_stanley_parable_text_game.AudioPlayer;
-import com.jools625.the_stanley_parable_text_game.HomeScreen;
 import com.jools625.the_stanley_parable_text_game.R;
 
-public class Ending extends AppCompatActivity {
+public class StanleyCrazy5 extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.femnarr_5_00, R.raw.femnarr_5_01, R.raw.femnarr_6_00, R.raw.femnarr_6_01, R.raw.femnarr_6_02, R.raw.femnarr_6_03};
+    int[] audioIDs = {R.raw.dream_1b_00, R.raw.dream_1b_01, R.raw.dream_1b_02};
     ImageButton nextButton, prevButton;
     Button option1;
     AudioPlayer audio;
@@ -22,7 +21,7 @@ public class Ending extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ending);
+        setContentView(R.layout.activity_stanely_crazy5);
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
@@ -48,7 +47,7 @@ public class Ending extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(Ending.this, HomeScreen.class);
+                Intent nextScreen = new Intent(StanleyCrazy5.this, StanleyCrazy6.class);
                 startActivity(nextScreen);
                 finish();
             }
@@ -58,8 +57,7 @@ public class Ending extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        if ((audio!= null) && (audio.isPlaying()))
-        {
+        if ((audio != null) && (audio.isPlaying())) {
             audio.pause();
         }
     }

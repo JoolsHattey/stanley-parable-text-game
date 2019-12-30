@@ -47,7 +47,7 @@ public class Hallway4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(Hallway4.this, Machine.class);
+                Intent nextScreen = new Intent(Hallway4.this, Museum1.class);
                 startActivity(nextScreen);
                 finish();
             }

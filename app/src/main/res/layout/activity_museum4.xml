@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".museum_ending.Machine">
+    tools:context=".museum_ending.Museum4">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mediaControls"
         android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
             android:id="@+id/buttonOption1"
             android:layout_width="match_parent"
             android:layout_height="65dp"
-            android:text="Walk into the door"
+            android:text="Restart game"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -68,5 +68,5 @@
         android:layout_height="333dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/intro_background" />
+        tools:srcCompat="@android:color/black" />
 </androidx.constraintlayout.widget.ConstraintLayout>

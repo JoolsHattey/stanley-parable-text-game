@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.jools625.the_stanley_parable_text_game.mind_control_facility.MindControlFacility;
+import com.jools625.the_stanley_parable_text_game.mind_control_facility.MindControlFacility1;
 import com.jools625.the_stanley_parable_text_game.museum_ending.Hallway1;
 
 public class Elevator extends AppCompatActivity {
@@ -48,7 +48,7 @@ public class Elevator extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(Elevator.this, MindControlFacility.class);
+                Intent nextScreen = new Intent(Elevator.this, MindControlFacility1.class);
                 startActivity(nextScreen);
                 finish();
             }

@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 import com.jools625.the_stanley_parable_text_game.AudioPlayer;
 import com.jools625.the_stanley_parable_text_game.R;
 
-public class LucidDreaming extends AppCompatActivity {
+public class StanleyCrazy3 extends AppCompatActivity {
 
     int[] audioIDs = {R.raw.dream_1a_11, R.raw.dream_1a_12, R.raw.dream_1a_13, R.raw.dream_1a_14
                     , R.raw.dream_1a_15, R.raw.dream_1a_16 ,R.raw.dream_1a_17 ,R.raw.dream_1a_18
@@ -24,7 +24,7 @@ public class LucidDreaming extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lucid_dreaming);
+        setContentView(R.layout.activity_stanely_crazy3);
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
@@ -50,7 +50,7 @@ public class LucidDreaming extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(LucidDreaming.this, CloseEyes.class);
+                Intent nextScreen = new Intent(StanleyCrazy3.this, StanleyCrazy4.class);
                 startActivity(nextScreen);
                 finish();
             }

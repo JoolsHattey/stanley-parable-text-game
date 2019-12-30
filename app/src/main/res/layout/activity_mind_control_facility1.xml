@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".death_ending.NextRoom">
-
+    tools:context=".mind_control_facility.MindControlFacility1">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mediaControls"
         android:layout_width="wrap_content"
@@ -56,7 +55,7 @@
             android:id="@+id/buttonOption1"
             android:layout_width="match_parent"
             android:layout_height="65dp"
-            android:text="Begin lucid dreaming"
+            android:text="Walk to the next platform"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -70,5 +69,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/intro_background" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

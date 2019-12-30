@@ -1,4 +1,4 @@
-package com.jools625.the_stanley_parable_text_game.museum_ending;
+package com.jools625.the_stanley_parable_text_game.death_ending;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,9 +11,10 @@ import android.widget.ImageButton;
 import com.jools625.the_stanley_parable_text_game.AudioPlayer;
 import com.jools625.the_stanley_parable_text_game.R;
 
-public class Machine extends AppCompatActivity {
+public class StanleyCrazy4 extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.femnarr_1_00, R.raw.femnarr_1_01, R.raw.femnarr_2_00, R.raw.femnarr_2_01};
+    int[] audioIDs = {R.raw.dream_1a_24, R.raw.dream_1a_25, R.raw.dream_1a_26, R.raw.dream_1a_27
+                    , R.raw.dream_1a_28, R.raw.dream_1a_29};
     ImageButton nextButton, prevButton;
     Button option1;
     AudioPlayer audio;
@@ -21,7 +22,7 @@ public class Machine extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_machine);
+        setContentView(R.layout.activity_stanely_crazy4);
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
@@ -47,9 +48,8 @@ public class Machine extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(Machine.this, StanleyInMuseum.class);
+                Intent nextScreen = new Intent(StanleyCrazy4.this, StanleyCrazy5.class);
                 startActivity(nextScreen);
-                finish();
             }
         });
 
@@ -57,8 +57,7 @@ public class Machine extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        if ((audio!= null) && (audio.isPlaying()))
-        {
+        if ((audio != null) && (audio.isPlaying())) {
             audio.pause();
         }
     }

@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 
 import com.jools625.the_stanley_parable_text_game.AudioPlayer;
 import com.jools625.the_stanley_parable_text_game.R;
-import com.jools625.the_stanley_parable_text_game.mind_control_facility.MindControlFacility;
+import com.jools625.the_stanley_parable_text_game.mind_control_facility.MindControlFacility1;
 
 public class Hallway3 extends AppCompatActivity {
 
@@ -49,7 +49,7 @@ public class Hallway3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(Hallway3.this, MindControlFacility.class);
+                Intent nextScreen = new Intent(Hallway3.this, MindControlFacility1.class);
                 startActivity(nextScreen);
                 finish();
             }

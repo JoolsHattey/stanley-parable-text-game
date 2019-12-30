@@ -69,6 +69,6 @@
         android:layout_height="333dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/intro_background" />
+        app:srcCompat="@drawable/boss_office_passageway_background" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

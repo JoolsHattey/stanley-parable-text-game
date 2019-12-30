@@ -11,8 +11,6 @@ import android.widget.ImageButton;
 import com.jools625.the_stanley_parable_text_game.AudioPlayer;
 import com.jools625.the_stanley_parable_text_game.HomeScreen;
 import com.jools625.the_stanley_parable_text_game.R;
-import com.jools625.the_stanley_parable_text_game.mind_control_facility.MindControlFacility;
-import com.jools625.the_stanley_parable_text_game.mind_control_facility.MindControlFacility2;
 
 public class ExplosionEnding5 extends AppCompatActivity {
 
