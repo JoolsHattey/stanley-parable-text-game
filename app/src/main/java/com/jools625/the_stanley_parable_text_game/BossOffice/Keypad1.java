@@ -9,8 +9,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.jools625.the_stanley_parable_text_game.AudioPlayer;
-import com.jools625.the_stanley_parable_text_game.EnterRightDoor;
-import com.jools625.the_stanley_parable_text_game.LeftRightDoor;
 import com.jools625.the_stanley_parable_text_game.R;
 
 public class Keypad1 extends AppCompatActivity {
@@ -23,7 +21,7 @@ public class Keypad1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_boss_office);
+        setContentView(R.layout.activity_keypad1);
 
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
