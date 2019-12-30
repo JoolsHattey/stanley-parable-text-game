@@ -15,7 +15,7 @@ import com.jools625.the_stanley_parable_text_game.R;
 
 public class MindControlFacility3 extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.two_doors_00};
+    int[] audioIDs = {R.raw.monitor_3_00, R.raw.monitor_3_01, R.raw.monitor_3_02};
     ImageButton nextButton, prevButton;
     Button option1;
     AudioPlayer audio;

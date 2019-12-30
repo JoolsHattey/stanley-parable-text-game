@@ -15,7 +15,9 @@ import com.jools625.the_stanley_parable_text_game.mind_control_facility.MindCont
 
 public class StanleyDefeatsMachine extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.two_doors_00};
+    int[] audioIDs = {R.raw.freedom_1_00, R.raw.freedom_1_01, R.raw.freedom_2_00, R.raw.freedom_2_01,
+                        R.raw.freedom_2_02, R.raw.freedom_2_03, R.raw.freedom_2_04, R.raw.freedom_2_05,
+                        R.raw.freedom_2_06, R.raw.freedom_2_07, R.raw.freedom_2_08};
     ImageButton nextButton, prevButton;
     Button option1;
     AudioPlayer audio;

@@ -17,7 +17,7 @@ import com.jools625.the_stanley_parable_text_game.freedom_ending.StanleyDefeatsM
 
 public class MindControlFacility5 extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.two_doors_00};
+    int[] audioIDs = {R.raw.controls_2_00};
     ImageButton nextButton, prevButton;
     Button option1, option2;
     AudioPlayer audio;

@@ -17,7 +17,7 @@ import com.jools625.the_stanley_parable_text_game.mind_control_facility.MindCont
 
 public class FreedomEnding extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.two_doors_00};
+    int[] audioIDs = {R.raw.freedom_3_00, R.raw.freedom_3_01, R.raw.freedom_3_02};
     ImageButton nextButton, prevButton;
     Button option1;
     AudioPlayer audio;
