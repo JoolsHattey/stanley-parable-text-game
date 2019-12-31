@@ -13,7 +13,7 @@ import com.jools625.the_stanley_parable_text_game.R;
 
 public class Keypad1 extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.two_doors_00};
+    int[] audioIDs = {R.raw.boss_1_00, R.raw.boss_1_01, R.raw.boss_1_02, R.raw.boss_1_03, R.raw.boss_1_04};
     ImageButton nextButton, prevButton;
     Button option1, option2;
     AudioPlayer audio;

@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 
 public class ExitEmployeeLounge extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.staircase_00};
+    int[] audioIDs = {R.raw.lounge_exit_00};
     ImageButton nextButton, prevButton;
     Button option1;
     AudioPlayer audio;
@@ -45,7 +45,7 @@ public class ExitEmployeeLounge extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(ExitEmployeeLounge.this, Staircase.class);
+                Intent nextScreen = new Intent(ExitEmployeeLounge.this, MeetingRoom.class);
                 startActivity(nextScreen);
                 finish();
             }

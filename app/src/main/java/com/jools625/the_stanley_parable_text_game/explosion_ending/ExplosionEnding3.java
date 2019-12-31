@@ -13,7 +13,9 @@ import com.jools625.the_stanley_parable_text_game.R;
 
 public class ExplosionEnding3 extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.two_doors_00};
+    int[] audioIDs = {R.raw.countdown_10, R.raw.countdown_11, R.raw.countdown_12, R.raw.countdown_13
+                    , R.raw.countdown_14, R.raw.countdown_15, R.raw.countdown_16, R.raw.countdown_17
+                    , R.raw.countdown_18, R.raw.countdown_19};
     ImageButton nextButton, prevButton;
     Button option1;
     AudioPlayer audio;

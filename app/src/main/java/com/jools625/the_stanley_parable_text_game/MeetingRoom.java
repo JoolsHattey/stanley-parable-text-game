@@ -8,9 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class EnterLeftDoor extends AppCompatActivity {
+public class MeetingRoom extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.two_doors_right_00};
+    int[] audioIDs = {R.raw.meeting_room_00, R.raw.meeting_room_01};
     ImageButton nextButton, prevButton;
     Button option1;
     AudioPlayer audio;
@@ -18,7 +18,7 @@ public class EnterLeftDoor extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_enter_left_door);
+        setContentView(R.layout.activity_meeting_room);
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
@@ -44,7 +44,7 @@ public class EnterLeftDoor extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(EnterLeftDoor.this, Staircase.class);
+                Intent nextScreen = new Intent(MeetingRoom.this, Staircase.class);
                 startActivity(nextScreen);
                 finish();
             }

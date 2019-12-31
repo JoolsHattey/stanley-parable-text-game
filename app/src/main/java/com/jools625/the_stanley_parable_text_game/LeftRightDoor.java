@@ -46,7 +46,7 @@ public class LeftRightDoor extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 audio.stopAudio();
-                Intent nextScreen = new Intent(LeftRightDoor.this, EnterLeftDoor.class);
+                Intent nextScreen = new Intent(LeftRightDoor.this, MeetingRoom.class);
                 startActivity(nextScreen);
                 finish();
             }

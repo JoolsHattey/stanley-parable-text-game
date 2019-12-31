@@ -16,7 +16,7 @@ import com.jools625.the_stanley_parable_text_game.R;
 
 public class DoorOpens extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.two_doors_00};
+    int[] audioIDs = {R.raw.boss_success_00, R.raw.boss_success_01};
     ImageButton nextButton, prevButton;
     Button option1;
     AudioPlayer audio;

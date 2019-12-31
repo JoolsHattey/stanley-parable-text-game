@@ -69,6 +69,6 @@
         android:layout_height="333dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/background_employee_lounge" />
+        app:srcCompat="@drawable/employee_lounge_background" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
