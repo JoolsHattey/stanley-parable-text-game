@@ -17,7 +17,7 @@ public class StanleyCrazy3 extends AppCompatActivity {
                     , R.raw.dream_1a_15, R.raw.dream_1a_16 ,R.raw.dream_1a_17 ,R.raw.dream_1a_18
                     , R.raw.dream_1a_19, R.raw.dream_1a_20, R.raw.dream_1a_21 ,R.raw.dream_1a_22
                     , R.raw.dream_1a_23};
-    ImageButton nextButton, prevButton;
+    ImageButton nextButton, prevButton, pausePlayButton;
     Button option1;
     AudioPlayer audio;
 
@@ -31,7 +31,19 @@ public class StanleyCrazy3 extends AppCompatActivity {
 
         audio = new AudioPlayer(audioIDs, getApplicationContext());
         audio.playAudio();
-
+        pausePlayButton = findViewById(R.id.buttonPausePlay);
+        pausePlayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if ((audio!= null) && (audio.isPlaying())) {
+                    audio.pause();
+                    pausePlayButton.setImageResource(R.drawable.ic_play_arrow_24px);
+                } else {
+                    audio.pause();
+                    pausePlayButton.setImageResource(R.drawable.ic_pause_24px);
+                }
+            }
+        });
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,6 +74,7 @@ public class StanleyCrazy3 extends AppCompatActivity {
         super.onPause();
         if ((audio != null) && (audio.isPlaying())) {
             audio.pause();
+            pausePlayButton.setImageResource(R.drawable.ic_play_arrow_24px);
         }
     }
 }

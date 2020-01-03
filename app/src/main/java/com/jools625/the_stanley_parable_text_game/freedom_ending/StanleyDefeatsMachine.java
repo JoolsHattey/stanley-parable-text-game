@@ -18,7 +18,7 @@ public class StanleyDefeatsMachine extends AppCompatActivity {
     int[] audioIDs = {R.raw.freedom_1_00, R.raw.freedom_1_01, R.raw.freedom_2_00, R.raw.freedom_2_01,
                         R.raw.freedom_2_02, R.raw.freedom_2_03, R.raw.freedom_2_04, R.raw.freedom_2_05,
                         R.raw.freedom_2_06, R.raw.freedom_2_07, R.raw.freedom_2_08};
-    ImageButton nextButton, prevButton;
+    ImageButton nextButton, prevButton, pausePlayButton;
     Button option1;
     AudioPlayer audio;
 
@@ -32,7 +32,19 @@ public class StanleyDefeatsMachine extends AppCompatActivity {
 
         audio = new AudioPlayer(audioIDs, getApplicationContext());
         audio.playAudio();
-
+        pausePlayButton = findViewById(R.id.buttonPausePlay);
+        pausePlayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if ((audio!= null) && (audio.isPlaying())) {
+                    audio.pause();
+                    pausePlayButton.setImageResource(R.drawable.ic_play_arrow_24px);
+                } else {
+                    audio.pause();
+                    pausePlayButton.setImageResource(R.drawable.ic_pause_24px);
+                }
+            }
+        });
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,6 +76,7 @@ public class StanleyDefeatsMachine extends AppCompatActivity {
         if ((audio!= null) && (audio.isPlaying()))
         {
             audio.pause();
+            pausePlayButton.setImageResource(R.drawable.ic_play_arrow_24px);
         }
     }
 }

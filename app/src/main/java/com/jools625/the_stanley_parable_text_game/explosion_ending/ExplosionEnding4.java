@@ -16,7 +16,7 @@ public class ExplosionEnding4 extends AppCompatActivity {
     int[] audioIDs = {R.raw.countdown_20, R.raw.countdown_21, R.raw.countdown_22, R.raw.countdown_23
                     , R.raw.countdown_24, R.raw.countdown_25, R.raw.countdown_26, R.raw.countdown_27
                     , R.raw.countdown_28, R.raw.countdown_29, R.raw.countdown_30};
-    ImageButton nextButton, prevButton;
+    ImageButton nextButton, prevButton, pausePlayButton;
     Button option1;
     AudioPlayer audio;
 
@@ -30,7 +30,19 @@ public class ExplosionEnding4 extends AppCompatActivity {
 
         audio = new AudioPlayer(audioIDs, getApplicationContext());
         audio.playAudio();
-
+        pausePlayButton = findViewById(R.id.buttonPausePlay);
+        pausePlayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if ((audio!= null) && (audio.isPlaying())) {
+                    audio.pause();
+                    pausePlayButton.setImageResource(R.drawable.ic_play_arrow_24px);
+                } else {
+                    audio.pause();
+                    pausePlayButton.setImageResource(R.drawable.ic_pause_24px);
+                }
+            }
+        });
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,6 +74,7 @@ public class ExplosionEnding4 extends AppCompatActivity {
         if ((audio!= null) && (audio.isPlaying()))
         {
             audio.pause();
+            pausePlayButton.setImageResource(R.drawable.ic_play_arrow_24px);
         }
     }
 }

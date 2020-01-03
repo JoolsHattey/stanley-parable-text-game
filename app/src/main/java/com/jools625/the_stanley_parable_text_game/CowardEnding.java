@@ -12,7 +12,7 @@ public class CowardEnding extends AppCompatActivity {
 
     int[] audioIDs = {R.raw.locked_office_00, R.raw.locked_office_01, R.raw.locked_office_02
                     , R.raw.locked_office_03, R.raw.locked_office_04, R.raw.locked_office_05};
-    ImageButton nextButton, prevButton;
+    ImageButton nextButton, prevButton, pausePlayButton;
     Button restartGameButton;
     AudioPlayer audio;
 
@@ -27,7 +27,19 @@ public class CowardEnding extends AppCompatActivity {
 
         audio = new AudioPlayer(audioIDs, getApplicationContext());
         audio.playAudio();
-
+        pausePlayButton = findViewById(R.id.buttonPausePlay);
+        pausePlayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if ((audio!= null) && (audio.isPlaying())) {
+                    audio.pause();
+                    pausePlayButton.setImageResource(R.drawable.ic_play_arrow_24px);
+                } else {
+                    audio.pause();
+                    pausePlayButton.setImageResource(R.drawable.ic_pause_24px);
+                }
+            }
+        });
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,6 +69,7 @@ public class CowardEnding extends AppCompatActivity {
         if ((audio!= null) && (audio.isPlaying()))
         {
             audio.pause();
+            pausePlayButton.setImageResource(R.drawable.ic_play_arrow_24px);
         }
     }
 }

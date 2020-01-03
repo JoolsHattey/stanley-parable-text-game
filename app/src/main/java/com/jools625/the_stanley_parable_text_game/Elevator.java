@@ -14,7 +14,7 @@ import com.jools625.the_stanley_parable_text_game.museum_ending.Hallway1;
 public class Elevator extends AppCompatActivity {
 
     int[] audioIDs = {R.raw.underground_2_00};
-    ImageButton nextButton, prevButton;
+    ImageButton nextButton, prevButton, pausePlayButton;
     Button option1, option2;
     AudioPlayer audio;
 
@@ -29,7 +29,19 @@ public class Elevator extends AppCompatActivity {
 
         audio = new AudioPlayer(audioIDs, getApplicationContext());
         audio.playAudio();
-
+        pausePlayButton = findViewById(R.id.buttonPausePlay);
+        pausePlayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if ((audio!= null) && (audio.isPlaying())) {
+                    audio.pause();
+                    pausePlayButton.setImageResource(R.drawable.ic_play_arrow_24px);
+                } else {
+                    audio.pause();
+                    pausePlayButton.setImageResource(R.drawable.ic_pause_24px);
+                }
+            }
+        });
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,6 +81,7 @@ public class Elevator extends AppCompatActivity {
         if ((audio!= null) && (audio.isPlaying()))
         {
             audio.pause();
+            pausePlayButton.setImageResource(R.drawable.ic_play_arrow_24px);
         }
     }
 }

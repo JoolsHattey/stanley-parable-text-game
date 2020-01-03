@@ -51,7 +51,13 @@ public class Intro extends AppCompatActivity {
         pausePlayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                audio.pause();
+                if ((audio!= null) && (audio.isPlaying())) {
+                    audio.pause();
+                    pausePlayButton.setImageResource(R.drawable.ic_play_arrow_24px);
+                } else {
+                    audio.pause();
+                    pausePlayButton.setImageResource(R.drawable.ic_pause_24px);
+                }
             }
         });
         option1.setOnClickListener(new View.OnClickListener() {
@@ -81,29 +87,8 @@ public class Intro extends AppCompatActivity {
         if ((audio!= null) && (audio.isPlaying()))
         {
             audio.pause();
+            pausePlayButton.setImageResource(R.drawable.ic_play_arrow_24px);
         }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // R.menu.mymenu is a reference to an xml file named mymenu.xml which should be inside your res/menu directory.
-        // If you don't have res/menu, just create a directory named "menu" inside res
-        getMenuInflater().inflate(R.menu.sound_menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    // handle button activities
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == R.id.narratorControl) {
-            // do something here
-        }
-        if (id == R.id.soundtrackControl) {
-            // do something here
-        }
-        return super.onOptionsItemSelected(item);
     }
 
 }

@@ -14,7 +14,7 @@ import com.jools625.the_stanley_parable_text_game.R;
 public class StanleyCrazy1 extends AppCompatActivity {
 
     int[] audioIDs = {R.raw.dream_1a_01, R.raw.dream_1a_02, R.raw.dream_1a_03};
-    ImageButton nextButton, prevButton;
+    ImageButton nextButton, prevButton, pausePlayButton;
     Button option1;
     AudioPlayer audio;
 
@@ -28,7 +28,19 @@ public class StanleyCrazy1 extends AppCompatActivity {
 
         audio = new AudioPlayer(audioIDs, getApplicationContext());
         audio.playAudio();
-
+        pausePlayButton = findViewById(R.id.buttonPausePlay);
+        pausePlayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if ((audio!= null) && (audio.isPlaying())) {
+                    audio.pause();
+                    pausePlayButton.setImageResource(R.drawable.ic_play_arrow_24px);
+                } else {
+                    audio.pause();
+                    pausePlayButton.setImageResource(R.drawable.ic_pause_24px);
+                }
+            }
+        });
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,6 +70,7 @@ public class StanleyCrazy1 extends AppCompatActivity {
         super.onPause();
         if ((audio != null) && (audio.isPlaying())) {
             audio.pause();
+            pausePlayButton.setImageResource(R.drawable.ic_play_arrow_24px);
         }
     }
 }

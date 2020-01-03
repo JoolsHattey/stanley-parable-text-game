@@ -14,7 +14,7 @@ import com.jools625.the_stanley_parable_text_game.R;
 public class Keypad1 extends AppCompatActivity {
 
     int[] audioIDs = {R.raw.boss_1_00, R.raw.boss_1_01, R.raw.boss_1_02, R.raw.boss_1_03, R.raw.boss_1_04};
-    ImageButton nextButton, prevButton;
+    ImageButton nextButton, prevButton, pausePlayButton;
     Button option1, option2;
     AudioPlayer audio;
 
@@ -27,7 +27,19 @@ public class Keypad1 extends AppCompatActivity {
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
         option2 = findViewById(R.id.buttonOption2);
-
+        pausePlayButton = findViewById(R.id.buttonPausePlay);
+        pausePlayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if ((audio!= null) && (audio.isPlaying())) {
+                    audio.pause();
+                    pausePlayButton.setImageResource(R.drawable.ic_play_arrow_24px);
+                } else {
+                    audio.pause();
+                    pausePlayButton.setImageResource(R.drawable.ic_pause_24px);
+                }
+            }
+        });
         audio = new AudioPlayer(audioIDs, getApplicationContext());
         audio.playAudio();
 
@@ -70,6 +82,7 @@ public class Keypad1 extends AppCompatActivity {
         if ((audio!= null) && (audio.isPlaying()))
         {
             audio.pause();
+            pausePlayButton.setImageResource(R.drawable.ic_play_arrow_24px);
         }
     }
 }

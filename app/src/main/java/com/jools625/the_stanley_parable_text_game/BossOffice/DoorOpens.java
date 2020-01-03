@@ -17,7 +17,7 @@ import com.jools625.the_stanley_parable_text_game.R;
 public class DoorOpens extends AppCompatActivity {
 
     int[] audioIDs = {R.raw.boss_success_00, R.raw.boss_success_01};
-    ImageButton nextButton, prevButton;
+    ImageButton nextButton, prevButton, pausePlayButton;
     Button option1;
     AudioPlayer audio;
 
@@ -28,7 +28,19 @@ public class DoorOpens extends AppCompatActivity {
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
         option1 = findViewById(R.id.buttonOption1);
-
+        pausePlayButton = findViewById(R.id.buttonPausePlay);
+        pausePlayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if ((audio!= null) && (audio.isPlaying())) {
+                    audio.pause();
+                    pausePlayButton.setImageResource(R.drawable.ic_play_arrow_24px);
+                } else {
+                    audio.pause();
+                    pausePlayButton.setImageResource(R.drawable.ic_pause_24px);
+                }
+            }
+        });
         audio = new AudioPlayer(audioIDs, getApplicationContext());
         audio.playAudio();
 
@@ -62,6 +74,7 @@ public class DoorOpens extends AppCompatActivity {
         if ((audio!= null) && (audio.isPlaying()))
         {
             audio.pause();
+            pausePlayButton.setImageResource(R.drawable.ic_play_arrow_24px);
         }
     }
 }

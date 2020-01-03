@@ -10,8 +10,8 @@ import android.widget.ImageButton;
 
 public class Passageway extends AppCompatActivity {
 
-    int[] audioIDs = {R.raw.two_doors_00};
-    ImageButton nextButton, prevButton;
+    int[] audioIDs = {};
+    ImageButton nextButton, prevButton, pausePlayButton;
     Button option1;
     AudioPlayer audio;
 
@@ -21,41 +21,23 @@ public class Passageway extends AppCompatActivity {
         setContentView(R.layout.activity_passageway);
         nextButton = findViewById(R.id.buttonNext);
         prevButton = findViewById(R.id.buttonPrev);
+        pausePlayButton = findViewById(R.id.buttonPausePlay);
+
+        nextButton.setClickable(false);
+        nextButton.setAlpha(.5f);
+        pausePlayButton.setClickable(false);
+        pausePlayButton.setAlpha(.5f);
+        prevButton.setClickable(false);
+        prevButton.setAlpha(.5f);
+
         option1 = findViewById(R.id.buttonOption1);
-
-        audio = new AudioPlayer(audioIDs, getApplicationContext());
-        audio.playAudio();
-
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                audio.stopAudio();
-                audio.nextTrack();
-            }
-        });
-        prevButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                audio.stopAudio();
-                audio.prevTrack();
-            }
-        });
         option1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                audio.stopAudio();
                 Intent nextScreen = new Intent(Passageway.this, Elevator.class);
                 startActivity(nextScreen);
                 finish();
             }
         });
-    }
-    @Override
-    protected void onPause() {
-        super.onPause();
-        if ((audio!= null) && (audio.isPlaying()))
-        {
-            audio.pause();
-        }
     }
 }
